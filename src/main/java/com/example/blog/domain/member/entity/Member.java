@@ -15,7 +15,7 @@ import org.hibernate.annotations.Comment;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class member {
+public class Member {
     @Comment("유저 아이디")
     @Column
     private String username;
