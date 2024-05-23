@@ -4,13 +4,15 @@ import com.example.blog.global.security.jpa.BaseEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import lombok.Builder;
-import lombok.Getter;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 @Entity
 @Getter
 @SuperBuilder
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class Post extends BaseEntity {
     private String title;
     private String content;
