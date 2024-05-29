@@ -1,26 +1,29 @@
-<!--<div>게시판 목록</div>-->
-<!--<div>-->
-<!--    <ul th:each="post: ${postList}">-->
-<!--        <li th:text="${post.title}"></li>-->
-<!--        <li th:text="${post.content}"></li>-->
-<!--    </ul>-->
-<!--</div>-->
-
-<!--<a href="/post/create">게시글 등록</a>-->
-
-<table>
-    <thead>
-    <tr>
-        <th>제목</th>
-        <th>작성일시</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="post : ${postList}">
-        <td th:text="${post.title}"></td>
-        <td th:text="${post.content}"></td>
-    </tr>
-    </tbody>
-</table>
+<div>게시판 목록</div>
+<div>
+    <ul th:each="post: ${postList}">
+        <li th:text="${post.title}"></li>
+        <li th:text="${post.content}"></li>
+        <li>
+            <img th:src="@{|/file/${post.thumbnailImg}|}" alt="12314">
+        </li>
+    </ul>
+</div>
 
 <a href="/post/create">게시글 등록</a>
+
+<!--<table>-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--        <th>제목</th>-->
+<!--        <th>작성일시</th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--    <tr th:each="post : ${postList}">-->
+<!--        <td th:text="${post.title}"></td>-->
+<!--        <td th:text="${post.content}"></td>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--</table>-->
+
+<!--<a href="/post/create">게시글 등록</a>-->
